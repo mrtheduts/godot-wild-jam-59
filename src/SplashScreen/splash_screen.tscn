@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/images/godot-wild-jam/GWJ-Full-Logo-tag.png" type="Texture" id=1]
+[ext_resource path="res://src/SplashScreen/splash_screen.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/effects/monster-growl-for-splash-screen.wav" type="AudioStream" id=3]
+
+[node name="SplashScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+initial_sound_effect = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0784314, 0.133333, 0.25098, 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
