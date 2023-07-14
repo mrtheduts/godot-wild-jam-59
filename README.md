@@ -1,4 +1,4 @@
-![Godot Wild Jam Logo](assets/images/godot_wild_jam/Wildling_head_only.svg)
+![Godot Wild Jam Logo](assets/images/godot-wild-jam/Wildling_head_only_180x180.png)
 # Godot Wild Jam #59
 
 Repository for [Godot Wild Jam #59](https://itch.io/jam/godot-wild-jam-59)
