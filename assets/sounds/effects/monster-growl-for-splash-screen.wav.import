@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/monster-growl-for-splash-screen.wav-f60440b148a13f08ebdbea1c6213137e.sample"
+type="AudioStreamWAV"
+uid="uid://cgmldd3wcmllx"
+path="res://.godot/imported/monster-growl-for-splash-screen.wav-f60440b148a13f08ebdbea1c6213137e.sample"
 
 [deps]
 
 source_file="res://assets/sounds/effects/monster-growl-for-splash-screen.wav"
-dest_files=[ "res://.import/monster-growl-for-splash-screen.wav-f60440b148a13f08ebdbea1c6213137e.sample" ]
+dest_files=["res://.godot/imported/monster-growl-for-splash-screen.wav-f60440b148a13f08ebdbea1c6213137e.sample"]
 
 [params]
 

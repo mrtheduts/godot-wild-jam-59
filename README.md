@@ -11,7 +11,7 @@ Repository for [Godot Wild Jam #59](https://itch.io/jam/godot-wild-jam-59)
 - Vinícius Barbosa de Souza ([@Vinibrb](https://github.com/Vinibrb))
 
 ## References
-- [Godot 3.x download](https://godotengine.org/download/3.x/)
-- [Godot 3.x docs](https://docs.godotengine.org/pt_BR/stable/index.html)
-- [Godot 3.x General GDScript Info](https://docs.godotengine.org/pt_BR/stable/tutorials/scripting/gdscript/gdscript_basics.html)
-- [Godot 3.x exporting docs](https://docs.godotengine.org/pt_BR/stable/tutorials/export/exporting_projects.html)
+- [Godot 4.x download](https://godotengine.org/download/)
+- [Godot 4.x docs](https://docs.godotengine.org/en/stable/)
+- [Godot 4.x General GDScript Info](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html)
+- [Godot 4.x exporting docs](https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html)

@@ -1,30 +1,36 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://bmevrlhnob2ew"]
 
-[ext_resource path="res://assets/images/godot-wild-jam/GWJ-Full-Logo-tag.png" type="Texture" id=1]
-[ext_resource path="res://src/SplashScreen/splash_screen.gd" type="Script" id=2]
-[ext_resource path="res://assets/sounds/effects/monster-growl-for-splash-screen.wav" type="AudioStream" id=3]
+[ext_resource type="Script" path="res://src/SplashScreen/splash_screen.gd" id="1_ir0d7"]
+[ext_resource type="Texture2D" uid="uid://8ahiphwldnir" path="res://assets/images/godot-wild-jam/GWJ-Full-Logo-tag.svg" id="2_rir4d"]
+[ext_resource type="AudioStream" uid="uid://cgmldd3wcmllx" path="res://assets/sounds/effects/monster-growl-for-splash-screen.wav" id="2_ww6g8"]
 
 [node name="SplashScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
-initial_sound_effect = ExtResource( 3 )
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ir0d7")
+sound_effect = ExtResource("2_ww6g8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0784314, 0.133333, 0.25098, 1 )
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0784314, 0.133333, 0.25098, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 1024.0
-margin_bottom = 600.0
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rir4d")
+expand_mode = 1
+stretch_mode = 5
