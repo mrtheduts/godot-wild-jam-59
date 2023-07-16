@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctr7ykublqy1t"]
+[gd_scene load_steps=4 format=3 uid="uid://ctr7ykublqy1t"]
 
-[ext_resource type="PackedScene" uid="uid://b4nnfi3f3s4gl" path="res://src/AxChampion/FallingButtons/falling_buttons.tscn" id="1_0jke4"]
+[ext_resource type="Script" path="res://src/AxChampion/ax_champion.gd" id="1_auqf7"]
+[ext_resource type="PackedScene" uid="uid://ci5a7te7ysvcn" path="res://src/AxChampion/ax_champion_world.tscn" id="2_21alg"]
+[ext_resource type="PackedScene" uid="uid://omtbul2nxie" path="res://src/AxChampion/FallingLanes/falling_lanes.tscn" id="4_wmsj0"]
 
 [node name="AxChampion" type="Control"]
 layout_mode = 3
@@ -9,21 +11,69 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_auqf7")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftHalf" type="CenterContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Line2D" type="ColorRect" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+
+[node name="RightHalf" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer/RightHalf"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/RightHalf/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(1152, 648)
-size_2d_override_stretch = true
+size = Vector2i(766, 648)
 render_target_update_mode = 4
 
-[node name="FallingButtons" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_0jke4")]
+[node name="AxChampionWorld" parent="HBoxContainer/RightHalf/SubViewportContainer/SubViewport" instance=ExtResource("2_21alg")]
 
-[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport"]
+[node name="Camera2D" type="Camera2D" parent="HBoxContainer/RightHalf/SubViewportContainer/SubViewport/AxChampionWorld"]
+
+[node name="BigFallingLanes" type="HBoxContainer" parent="HBoxContainer/RightHalf"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="FirstFallingLanes" parent="HBoxContainer/RightHalf/BigFallingLanes" instance=ExtResource("4_wmsj0")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Control" type="Control" parent="HBoxContainer/RightHalf/BigFallingLanes"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="SecondFallingLanes" parent="HBoxContainer/RightHalf/BigFallingLanes" instance=ExtResource("4_wmsj0")]
+unique_name_in_owner = true
+layout_mode = 2
+input_type = "second"

@@ -6,8 +6,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_cd3s8"]
 radius = 8.0
 
-[sub_resource type="Animation" id="Animation_qd6bv"]
-resource_name = "idle_bottom"
+[sub_resource type="Animation" id="Animation_ctr4i"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -21,8 +21,8 @@ tracks/0/keys = {
 "values": [1]
 }
 
-[sub_resource type="Animation" id="Animation_ctr4i"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_qd6bv"]
+resource_name = "idle_bottom"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
