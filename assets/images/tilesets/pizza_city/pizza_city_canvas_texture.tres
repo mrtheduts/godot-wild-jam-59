@@ -1,0 +1,8 @@
+[gd_resource type="CanvasTexture" load_steps=3 format=3 uid="uid://t0hlbuho4c3e"]
+
+[ext_resource type="Texture2D" uid="uid://c1q1eo27uis64" path="res://assets/images/tilesets/pizza_city/pizza_city.png" id="1_dng3w"]
+[ext_resource type="Texture2D" uid="uid://ocq8vs0upxvd" path="res://assets/images/tilesets/pizza_city/pizza_city_normal_map.png" id="2_1ydh8"]
+
+[resource]
+diffuse_texture = ExtResource("1_dng3w")
+normal_texture = ExtResource("2_1ydh8")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4nnfi3f3s4gl"]
+
+[ext_resource type="Texture2D" uid="uid://chd13yhcj4b3l" path="res://assets/images/godot-wild-jam/Wildling_head_only.png" id="1_wfcu8"]
+
+[node name="FallingButtons" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -2)
+scale = Vector2(0.104004, 0.104004)
+texture = ExtResource("1_wfcu8")

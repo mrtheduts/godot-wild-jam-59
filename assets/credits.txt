@@ -1,2 +1,8 @@
 Sounds:
 Monster Growl - https://freesound.org/people/JonCon_Library/sounds/481642/
+
+Tilesets:
+City - www.kenney.nl
+
+Spritesheets:
+City Characters - www.kenney.nl
