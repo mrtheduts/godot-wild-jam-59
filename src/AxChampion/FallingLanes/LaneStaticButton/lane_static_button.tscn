@@ -19,5 +19,6 @@ script = ExtResource("1_wggx5")
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
 size_flags_vertical = 4
+mouse_filter = 2
 toggle_mode = true
 text = "Placeholder"

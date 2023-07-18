@@ -1,8 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ci5a7te7ysvcn"]
 
-[ext_resource type="Texture2D" uid="uid://bs5f7jm403fot" path="res://icon.svg" id="1_u3op6"]
+[ext_resource type="Script" path="res://src/AxChampion/ax_champion_world.gd" id="1_mthwe"]
 
 [node name="AxChampionWorld" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_u3op6")
+script = ExtResource("1_mthwe")

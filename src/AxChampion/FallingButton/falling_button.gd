@@ -1,30 +1,21 @@
-extends Node2D
+extends CharacterBody2D
 
-@export_enum(
-	"first_left", \
-	"first_up", \
-	"first_down", \
-	"first_right", \
-	"second_left", \
-	"second_up", \
-	"second_down", \
-	"second_right", \
-) var input_type := "first_left"
+class_name FallingButton
 
-@export var label := "w"
+@export var initial_velocity := Vector2.DOWN
+var label := "w"
 
-func _init(label: String):
-	self.label = label
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Label.text = label
+	self.velocity = initial_velocity
 
 
-func set_label_from_input_type() -> void:
-	var input_actions := InputMap.action_get_events(input_type)
-	
+# Called every physics frame. 'delta' is the elapsed time since the previous frame.
+func _physics_process(delta: float):
+	move_and_slide()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()

@@ -8,6 +8,7 @@
 [node name="PizzaCity" type="Node2D"]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.4, 0.4, 0.4, 1)
 
 [node name="TileMap" type="TileMap" parent="."]
